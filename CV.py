@@ -8,6 +8,7 @@ df_group = df.groupby(by=["Country", "Year Start", "Project Type"]).size().reset
 df_map = df.groupby(by=["Country"]).size().reset_index(name="counts")
 
 app = Dash(__name__)
+server=app.server
 
 
 app.layout = html.Div([
